@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class Shop : MonoBehaviour
 {
-    // Start is called before the first frame update
+    BuildManager buildManager;
+
     void Start()
     {
-        
+        buildManager = BuildManager.instance;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void PurchaseStandardTurret()
     {
-        
+        Debug.Log("Standard Turret Purchased");
+        buildManager.SetTurretToBuild(buildManager.standardTurretPrefab);
+    }
+
+
+    public void PurchaseAnotherTurret()
+    {
+        Debug.Log("Another Turret Purchase");
+        buildManager.SetTurretToBuild(buildManager.anotherTurretPrefab);
     }
 }
