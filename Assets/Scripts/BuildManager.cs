@@ -21,11 +21,6 @@ public class BuildManager : MonoBehaviour
         instance = this;
     }
 
-    void Start()
-    {
-        turretToBuild = standardTurretPrefab;
-    }
-
     // Update is called once per frame
     void Update()
     {
