@@ -424,8 +424,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aaed1961a290934caf4755ce1dcfdc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 15
-  fireRate: 1
+  range: 30
+  fireRate: 0.25
   target: {fileID: 0}
   partToRotate: {fileID: 1460391035550664014}
   turnSpeed: 10

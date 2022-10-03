@@ -1024,7 +1024,7 @@ GameObject:
   - component: {fileID: 90268213}
   - component: {fileID: 90268212}
   m_Layer: 5
-  m_Name: AnotherTurretItem
+  m_Name: RocketTurretItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1117,7 +1117,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 544860227}
         m_TargetAssemblyTypeName: Shop, Assembly-CSharp
-        m_MethodName: PurchaseAnotherTurret
+        m_MethodName: PurchaseRocketTurret
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13262,6 +13262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   standardTurretPrefab: {fileID: 7574675760460784052, guid: ebaa724db61b06e44989a11246f812f0, type: 3}
+  rocketTurretPrefab: {fileID: 8193713080144749547, guid: d7243373d708e8e44ac9962353ea5b3b, type: 3}
 --- !u!1001 &1774797490
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14887,7 +14888,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Gun Turret
+  m_text: Rocket Turret
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -16463,6 +16464,71 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01dc8a8b45615eb42a025ff1dbb22755, type: 3}
+--- !u!1001 &6154032591944031526
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 388363229454031714, guid: d7243373d708e8e44ac9962353ea5b3b, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 388363229454031714, guid: d7243373d708e8e44ac9962353ea5b3b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 64.96483
+      objectReference: {fileID: 0}
+    - target: {fileID: 388363229454031714, guid: d7243373d708e8e44ac9962353ea5b3b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.1915221
+      objectReference: {fileID: 0}
+    - target: {fileID: 388363229454031714, guid: d7243373d708e8e44ac9962353ea5b3b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -16.05851
+      objectReference: {fileID: 0}
+    - target: {fileID: 388363229454031714, guid: d7243373d708e8e44ac9962353ea5b3b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 388363229454031714, guid: d7243373d708e8e44ac9962353ea5b3b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 388363229454031714, guid: d7243373d708e8e44ac9962353ea5b3b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 388363229454031714, guid: d7243373d708e8e44ac9962353ea5b3b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 388363229454031714, guid: d7243373d708e8e44ac9962353ea5b3b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 388363229454031714, guid: d7243373d708e8e44ac9962353ea5b3b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 388363229454031714, guid: d7243373d708e8e44ac9962353ea5b3b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4082058553005963647, guid: d7243373d708e8e44ac9962353ea5b3b, type: 3}
+      propertyPath: range
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4082058553005963647, guid: d7243373d708e8e44ac9962353ea5b3b, type: 3}
+      propertyPath: fireRate
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8193713080144749547, guid: d7243373d708e8e44ac9962353ea5b3b, type: 3}
+      propertyPath: m_Name
+      value: Rocket Turret
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d7243373d708e8e44ac9962353ea5b3b, type: 3}
 --- !u!1 &7345849601155449520 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7574675760460784052, guid: ebaa724db61b06e44989a11246f812f0, type: 3}
