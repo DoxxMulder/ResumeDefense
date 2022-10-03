@@ -16301,7 +16301,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2146233048903407933, guid: ebaa724db61b06e44989a11246f812f0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 64.96483
+      value: 34.96483
       objectReference: {fileID: 0}
     - target: {fileID: 2146233048903407933, guid: ebaa724db61b06e44989a11246f812f0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -16523,11 +16523,16 @@ PrefabInstance:
       propertyPath: fireRate
       value: 0.25
       objectReference: {fileID: 0}
+    - target: {fileID: 4082058553005963647, guid: d7243373d708e8e44ac9962353ea5b3b, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 8915683416808835638, guid: d6ee76ff430037140831fa21a5aec05d, type: 3}
     - target: {fileID: 8193713080144749547, guid: d7243373d708e8e44ac9962353ea5b3b, type: 3}
       propertyPath: m_Name
       value: Rocket Turret
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: d7243373d708e8e44ac9962353ea5b3b, type: 3}
 --- !u!1 &7345849601155449520 stripped
 GameObject:
