@@ -1117,7 +1117,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 544860227}
         m_TargetAssemblyTypeName: Shop, Assembly-CSharp
-        m_MethodName: PurchaseRocketTurret
+        m_MethodName: SelectRocketTurret
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4291,6 +4291,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef2d49e80c5cd464a8434990d1974423, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  standardTurret:
+    prefab: {fileID: 0}
+    cost: 100
+  rocketTurret:
+    prefab: {fileID: 0}
+    cost: 200
 --- !u!1001 &570609862
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12279,7 +12285,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 544860227}
         m_TargetAssemblyTypeName: Shop, Assembly-CSharp
-        m_MethodName: PurchaseStandardTurret
+        m_MethodName: SelectStandardTurret
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
