@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     public Transform spawnPoint;
     public TextMeshProUGUI waveCountdownText;
 
-    public float timeBetweenWaves = 5f;
+    public float timeBetweenWaves = 20f;
 
     private float countdown = 2f;
     private float spawnDelay = 0.5f;
@@ -31,9 +31,10 @@ public class GameManager : MonoBehaviour
             StartCoroutine(SpawnWave());
             countdown = timeBetweenWaves;
         }
-        
-        waveCountdownText.text = Mathf.Ceil(countdown).ToString();
         countdown -= Time.deltaTime;
+        countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
+        waveCountdownText.text = string.Format("{0:00.00}", countdown);
+        
     }
 
     IEnumerator SpawnWave()
