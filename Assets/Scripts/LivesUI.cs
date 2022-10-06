@@ -12,4 +12,5 @@ public class LivesUI : MonoBehaviour
     {
         livesText.text = "Lives: " + PlayerStats.Lives;
     }
+
 }

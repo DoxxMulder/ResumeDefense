@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     private float spawnDelay = 0.5f;
     private int waveIndex = 0;
 
+    private bool gameEnded = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +28,11 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (gameEnded)
+        {
+            return;
+        }
+
         if (countdown <= 0f)
         {
             StartCoroutine(SpawnWave());
@@ -34,6 +41,11 @@ public class GameManager : MonoBehaviour
         countdown -= Time.deltaTime;
         countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
         waveCountdownText.text = string.Format("{0:00.00}", countdown);
+
+        if (PlayerStats.Lives <= 0)
+        {
+            EndGame();
+        }
         
     }
 
@@ -52,5 +64,10 @@ public class GameManager : MonoBehaviour
     void SpawnEnemy()
     {
         Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+    }
+
+    private void EndGame()
+    {
+        Debug.Log("Game Over!");
     }
 }
