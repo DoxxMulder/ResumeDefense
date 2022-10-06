@@ -10,6 +10,8 @@ public class Bullet : MonoBehaviour
     public float speed = 70f;
     public float explosionRadius = 0;
     public GameObject impactEffect;
+
+    public int damage = 50;
     
     // Start is called before the first frame update
     void Start()
@@ -64,7 +66,11 @@ public class Bullet : MonoBehaviour
 
     void Damage(Transform enemy)
     {
-        Destroy(enemy.gameObject);
+        Enemy e =enemy.GetComponent<Enemy>();
+
+        e.TakeDamage(damage);
+
+        //Destroy(enemy.gameObject);
     }
 
     void Explode()
