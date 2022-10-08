@@ -27,33 +27,60 @@ public class Turret : MonoBehaviour
 
     public Transform firePoint;
 
-    // Start is called before the first frame update
     void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(target == null)
         {
+            if (useLaser)
+            {
+                if (lineRenderer.enabled)
+                {
+                    lineRenderer.enabled = false;
+                }
+            }
             return;
         }
 
-        //Rotation to lock-on to target
+        LockOnTarget();
+
+        if (useLaser)
+        {
+            Laser();
+        }
+        else
+        {
+            if (fireCountdown <= 0)
+            {
+                Shoot();
+                fireCountdown = 1f / fireRate;
+            }
+            fireCountdown -= Time.deltaTime;
+        }        
+    }
+
+    //Rotation to lock-on to target
+    void LockOnTarget()
+    {
         Vector3 dir = target.position - transform.position;
         Quaternion lookRotation = Quaternion.LookRotation(dir);
         Vector3 rotation = Quaternion.Lerp(partToRotate.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
         partToRotate.rotation = Quaternion.Euler(0f, rotation.y, 0f);
+    }
 
-        if (fireCountdown <= 0)
+    void Laser()
+    {
+        if (!lineRenderer.enabled)
         {
-            Shoot();
-            fireCountdown = 1f / fireRate;
+            lineRenderer.enabled = true;
         }
 
-        fireCountdown -= Time.deltaTime;
+        lineRenderer.SetPosition(0, firePoint.position);
+        lineRenderer.SetPosition(1, target.position);
     }
 
     void Shoot()
