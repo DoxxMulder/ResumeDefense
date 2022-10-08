@@ -18,6 +18,7 @@ public class Turret : MonoBehaviour
     public bool useLaser = false;
     public LineRenderer lineRenderer;
     public ParticleSystem impactEffect;
+    public Light impactLight;
 
     [Header("Unity Setup Fields")]
 
@@ -43,6 +44,7 @@ public class Turret : MonoBehaviour
                 {
                     lineRenderer.enabled = false;
                     impactEffect.Stop();
+                    impactLight.enabled = false;
                 }
             }
             return;
@@ -80,6 +82,7 @@ public class Turret : MonoBehaviour
         {
             lineRenderer.enabled = true;
             impactEffect.Play();
+            impactLight.enabled = true;
         }
 
         lineRenderer.SetPosition(0, firePoint.position);
@@ -120,6 +123,10 @@ public class Turret : MonoBehaviour
         if (nearestEnemy != null && shortestDistance <= range)
         {
             target = nearestEnemy.transform;
+        }
+        else
+        {
+            target = null;
         }
     }
 

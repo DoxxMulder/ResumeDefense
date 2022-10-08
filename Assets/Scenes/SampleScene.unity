@@ -18535,10 +18535,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Laser Turret
       objectReference: {fileID: 0}
-    - target: {fileID: 3696834835460580863, guid: bc3141f5611aac84780086eed83262c8, type: 3}
-      propertyPath: moveWithTransform
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5030911756667950574, guid: bc3141f5611aac84780086eed83262c8, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -18927,6 +18923,7 @@ MonoBehaviour:
   useLaser: 0
   lineRenderer: {fileID: 0}
   impactEffect: {fileID: 0}
+  impactLight: {fileID: 0}
   target: {fileID: 0}
   partToRotate: {fileID: 1141285909}
   turnSpeed: 10
