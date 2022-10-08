@@ -5,20 +5,26 @@ using UnityEngine;
 public class Turret : MonoBehaviour
 {
     
-    [Header("Attributes")]
+    [Header("General")]
 
     public float range = 15f;
+
+    [Header("Use Bullets (default)")]
+    public GameObject bulletPrefab;
     public float fireRate = 1f;
     private float fireCountdown = 0f;
+
+    [Header("Use Laser")]
+    public bool useLaser = false;
+    public LineRenderer lineRenderer;
 
     [Header("Unity Setup Fields")]
 
     public Transform target;
     public Transform partToRotate;
     public float turnSpeed = 10f;
-    private string enemyTag = "Enemy";
+    public string enemyTag = "Enemy";
 
-    public GameObject bulletPrefab;
     public Transform firePoint;
 
     // Start is called before the first frame update
