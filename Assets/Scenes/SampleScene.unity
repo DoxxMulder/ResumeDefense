@@ -18535,10 +18535,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Laser Turret
       objectReference: {fileID: 0}
-    - target: {fileID: 3532853423556144487, guid: bc3141f5611aac84780086eed83262c8, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5030911756667950574, guid: bc3141f5611aac84780086eed83262c8, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -18929,6 +18925,7 @@ MonoBehaviour:
   slowPct: 0.5
   lineRenderer: {fileID: 0}
   impactEffect: {fileID: 0}
+  beamEmissionEffect: {fileID: 0}
   impactLight: {fileID: 0}
   partToRotate: {fileID: 1141285909}
   turnSpeed: 10

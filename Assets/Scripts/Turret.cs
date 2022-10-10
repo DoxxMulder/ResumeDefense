@@ -23,6 +23,7 @@ public class Turret : MonoBehaviour
     public float slowPct = 0.5f;
     public LineRenderer lineRenderer;
     public ParticleSystem impactEffect;
+    public ParticleSystem beamEmissionEffect;
     public Light impactLight;
 
     [Header("Unity Setup Fields")]
@@ -49,6 +50,7 @@ public class Turret : MonoBehaviour
                     lineRenderer.enabled = false;
                     impactEffect.Stop();
                     impactLight.enabled = false;
+                    beamEmissionEffect.Stop();
                 }
             }
             return;
@@ -91,6 +93,7 @@ public class Turret : MonoBehaviour
             lineRenderer.enabled = true;
             impactEffect.Play();
             impactLight.enabled = true;
+            beamEmissionEffect.Play();
         }
 
         lineRenderer.SetPosition(0, firePoint.position);
@@ -99,6 +102,7 @@ public class Turret : MonoBehaviour
         Vector3 dir = firePoint.position - target.position;
         impactEffect.transform.rotation = Quaternion.LookRotation(dir);
         impactEffect.transform.position = target.position + dir.normalized;
+
     }
 
     void Shoot()
