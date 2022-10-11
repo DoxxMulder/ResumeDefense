@@ -4506,6 +4506,7 @@ GameObject:
   - component: {fileID: 468849364}
   - component: {fileID: 468849363}
   - component: {fileID: 468849362}
+  - component: {fileID: 468849365}
   m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
@@ -4523,7 +4524,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 239278421}
   m_Father: {fileID: 965104488}
@@ -4628,6 +4629,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 468849360}
   m_CullTransparentMesh: 1
+--- !u!225 &468849365
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468849360}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1001 &479263829
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5133,6 +5146,7 @@ GameObject:
   - component: {fileID: 524388859}
   - component: {fileID: 524388861}
   - component: {fileID: 524388860}
+  - component: {fileID: 524388862}
   m_Layer: 5
   m_Name: Game Over Text
   m_TagString: Untagged
@@ -5257,6 +5271,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 524388858}
   m_CullTransparentMesh: 1
+--- !u!225 &524388862
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524388858}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1001 &525274073
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7904,6 +7930,7 @@ GameObject:
   - component: {fileID: 818224745}
   - component: {fileID: 818224744}
   - component: {fileID: 818224743}
+  - component: {fileID: 818224746}
   m_Layer: 5
   m_Name: Retry
   m_TagString: Untagged
@@ -7921,7 +7948,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 695708250}
   m_Father: {fileID: 965104488}
@@ -8026,6 +8053,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 818224741}
   m_CullTransparentMesh: 1
+--- !u!225 &818224746
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 818224741}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1001 &822105281
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8983,13 +9022,14 @@ GameObject:
   m_Component:
   - component: {fileID: 965104488}
   - component: {fileID: 965104489}
+  - component: {fileID: 965104490}
   m_Layer: 5
   m_Name: Game Over
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &965104488
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9028,6 +9068,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roundsText: {fileID: 1636986134}
+--- !u!95 &965104490
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 965104487}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4f81aa78c9032d94d8d6d484f3ced41a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &981409267
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12057,8 +12117,9 @@ GameObject:
   - component: {fileID: 1267629520}
   - component: {fileID: 1267629522}
   - component: {fileID: 1267629521}
+  - component: {fileID: 1267629523}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12122,6 +12183,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1267629519}
   m_CullTransparentMesh: 1
+--- !u!225 &1267629523
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1267629519}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1272427600
 GameObject:
   m_ObjectHideFlags: 0
@@ -17674,6 +17747,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1860878326}
+  - component: {fileID: 1860878327}
   m_Layer: 5
   m_Name: Rounds Survived
   m_TagString: Untagged
@@ -17691,7 +17765,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1636986133}
   - {fileID: 121267250}
@@ -17703,6 +17777,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 444.5769, y: 214.2097}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!225 &1860878327
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860878325}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1881983908
 GameObject:
   m_ObjectHideFlags: 0
