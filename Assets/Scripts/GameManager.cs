@@ -43,6 +43,7 @@ public class GameManager : MonoBehaviour
 
         if (PlayerStats.Lives <= 0)
         {
+            PlayerStats.Rounds = PlayerStats.LifeLostToEnemyFromWave;   //Set Rounds variable to *actual* number of waves survived, IE if you lose to the first enemy, you've survived 0 rounds
             EndGame();
         }
         
@@ -58,6 +59,8 @@ public class GameManager : MonoBehaviour
         }
         
         Debug.Log("Wave Incoming!");
+
+        PlayerStats.Rounds++;
     }
 
     void SpawnEnemy()

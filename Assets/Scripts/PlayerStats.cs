@@ -10,9 +10,15 @@ public class PlayerStats : MonoBehaviour
     public static int Lives;
     public int startLives = 10;
 
+    public static int Rounds;
+
+    public static int LifeLostToEnemyFromWave;
+
     void Start()
     {
         Money = startMoney;
         Lives = startLives;
+
+        Rounds = 0;
     }
 }

@@ -11,11 +11,15 @@ public class Enemy : MonoBehaviour
     public float health = 100;
     public int value = 10;
 
+    [HideInInspector]
+    public int partOfWave;
+
     public GameObject deathEffect;
 
     private void Start()
     {
         speed = startSpeed;
+        partOfWave = PlayerStats.Rounds;
     }
 
 

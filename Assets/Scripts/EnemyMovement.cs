@@ -46,6 +46,7 @@ public class EnemyMovement : MonoBehaviour
 
     void EndPath()
     {
+        PlayerStats.LifeLostToEnemyFromWave = enemy.partOfWave;
         PlayerStats.Lives--;
         Destroy(gameObject);
     }
