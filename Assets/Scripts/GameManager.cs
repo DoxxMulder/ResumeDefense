@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public Transform enemyPrefab;
     public Transform spawnPoint;
     public TextMeshProUGUI waveCountdownText;
+    public GameObject gameOverUI;
 
     public float timeBetweenWaves = 20f;
 
@@ -17,18 +18,16 @@ public class GameManager : MonoBehaviour
     private float spawnDelay = 0.5f;
     private int waveIndex = 0;
 
-    private bool gameEnded = false;
+    public static bool GameIsOver;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
+        GameIsOver = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (gameEnded)
+        if (GameIsOver)
         {
             return;
         }
@@ -68,6 +67,8 @@ public class GameManager : MonoBehaviour
 
     private void EndGame()
     {
-        Debug.Log("Game Over!");
+        GameIsOver = true;
+        gameOverUI.SetActive(true);
+
     }
 }
