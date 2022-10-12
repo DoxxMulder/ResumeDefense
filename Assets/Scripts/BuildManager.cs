@@ -10,6 +10,7 @@ public class BuildManager : MonoBehaviour
     public GameObject buildEffect;
     
     private TurretBlueprint turretToBuild;
+    private Node selectedNode;
 
     void Awake()
     {
@@ -42,9 +43,17 @@ public class BuildManager : MonoBehaviour
         Debug.Log("Turret built. Money left: " + PlayerStats.Money);
     }
     
+    public void SelectNode(Node node)
+    {
+        selectedNode = node;
+        turretToBuild = null;
+
+        NodeUI.SetTarget(node);
+    }
 
     public void SelectTurretToBuild(TurretBlueprint turret)
     {
         turretToBuild = turret;
+        selectedNode = null;
     }
 }
