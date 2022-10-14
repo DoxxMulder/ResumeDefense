@@ -5824,12 +5824,12 @@ MonoBehaviour:
   rocketTurret:
     prefab: {fileID: 8193713080144749547, guid: d7243373d708e8e44ac9962353ea5b3b, type: 3}
     cost: 200
-    upgradedPrefab: {fileID: 0}
+    upgradedPrefab: {fileID: 8193713080144749547, guid: 6c0ac965167d8fe439b440a204e1cade, type: 3}
     upgradeCost: 150
   laserTurret:
     prefab: {fileID: 3532853423556144487, guid: bc3141f5611aac84780086eed83262c8, type: 3}
     cost: 350
-    upgradedPrefab: {fileID: 0}
+    upgradedPrefab: {fileID: 3532853423556144487, guid: 7aad4a172f1b5ca4a8b21c2c643183e7, type: 3}
     upgradeCost: 200
 --- !u!1 &550751104
 GameObject:
