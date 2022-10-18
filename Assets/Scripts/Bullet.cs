@@ -11,15 +11,8 @@ public class Bullet : MonoBehaviour
     public float explosionRadius = 0;
     public GameObject impactEffect;
 
-    public int damage = 50;
+    public int damage = 25;
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if (target == null)
@@ -60,7 +53,7 @@ public class Bullet : MonoBehaviour
             Damage(target);
         }
 
-        Destroy(target.gameObject);
+        //Destroy(target.gameObject);
         Destroy(gameObject);
     }
 
@@ -69,8 +62,6 @@ public class Bullet : MonoBehaviour
         Enemy e =enemy.GetComponent<Enemy>();
 
         e.TakeDamage(damage);
-
-        //Destroy(enemy.gameObject);
     }
 
     void Explode()
