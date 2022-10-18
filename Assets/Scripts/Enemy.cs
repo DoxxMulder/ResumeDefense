@@ -20,6 +20,8 @@ public class Enemy : MonoBehaviour
 
     [Header("Unity Stuff")]
     public Image healthBar;
+    public Gradient healthGradient;
+
 
     private void Start()
     {
@@ -32,9 +34,10 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(float amount)
     {
         health -= amount;
-        Debug.Log("Took " + amount + " damage. Current health: " + health);
-
-        healthBar.fillAmount = health / startHealth;
+        //Debug.Log("Took " + amount + " damage. Current health: " + health);
+        float healthPct = health / startHealth;
+        healthBar.fillAmount = healthPct;
+        healthBar.color = healthGradient.Evaluate(healthPct);
 
         if (health <= 0)
         {
