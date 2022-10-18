@@ -22289,58 +22289,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -2639339601073072672, guid: 860fece1f00d1b24a9ea9ce7466281c1, type: 3}
-      propertyPath: healthColor.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -2639339601073072672, guid: 860fece1f00d1b24a9ea9ce7466281c1, type: 3}
-      propertyPath: healthColor.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -2639339601073072672, guid: 860fece1f00d1b24a9ea9ce7466281c1, type: 3}
-      propertyPath: healthColor.g
-      value: 0.6666667
-      objectReference: {fileID: 0}
-    - target: {fileID: -2639339601073072672, guid: 860fece1f00d1b24a9ea9ce7466281c1, type: 3}
-      propertyPath: healthColor.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -2639339601073072672, guid: 860fece1f00d1b24a9ea9ce7466281c1, type: 3}
-      propertyPath: healthColor2.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -2639339601073072672, guid: 860fece1f00d1b24a9ea9ce7466281c1, type: 3}
-      propertyPath: healthColor2.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -2639339601073072672, guid: 860fece1f00d1b24a9ea9ce7466281c1, type: 3}
-      propertyPath: healthColor2.r
-      value: 0.6666667
-      objectReference: {fileID: 0}
-    - target: {fileID: -2639339601073072672, guid: 860fece1f00d1b24a9ea9ce7466281c1, type: 3}
-      propertyPath: healthGradient.key0.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -2639339601073072672, guid: 860fece1f00d1b24a9ea9ce7466281c1, type: 3}
-      propertyPath: healthGradient.key0.g
-      value: 0.6666667
-      objectReference: {fileID: 0}
-    - target: {fileID: -2639339601073072672, guid: 860fece1f00d1b24a9ea9ce7466281c1, type: 3}
-      propertyPath: healthGradient.key0.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -2639339601073072672, guid: 860fece1f00d1b24a9ea9ce7466281c1, type: 3}
-      propertyPath: healthGradient.key1.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -2639339601073072672, guid: 860fece1f00d1b24a9ea9ce7466281c1, type: 3}
-      propertyPath: healthGradient.key1.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -2639339601073072672, guid: 860fece1f00d1b24a9ea9ce7466281c1, type: 3}
-      propertyPath: healthGradient.key1.r
-      value: 0.6666667
-      objectReference: {fileID: 0}
     - target: {fileID: 3197256190354052916, guid: 860fece1f00d1b24a9ea9ce7466281c1, type: 3}
       propertyPath: m_RootOrder
       value: 16

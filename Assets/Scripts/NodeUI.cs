@@ -21,12 +21,11 @@ public class NodeUI : MonoBehaviour
 
         transform.position = target.GetBuildPosition();
 
-       
+        StartCoroutine(CheckMoney());
 
         if (!target.isUpgraded)
         {
             upgradeCost.text = "$" + target.turretBlueprint.upgradeCost;
-            upgradeButton.interactable = true;
         }
         else
         {
@@ -37,6 +36,22 @@ public class NodeUI : MonoBehaviour
         sellAmount.text = "$" + target.turretBlueprint.GetSellAmount();
 
         ui.SetActive(true);
+    }
+
+    IEnumerator CheckMoney()
+    {
+        for (; ; )
+        {
+            if (PlayerStats.Money >= target.turretBlueprint.upgradeCost)
+            {
+                upgradeButton.interactable = true;
+            }
+            else
+            {
+                upgradeButton.interactable = false;
+            }
+            yield return new WaitForSeconds(0.25f);
+        }
     }
 
     public void Hide()
