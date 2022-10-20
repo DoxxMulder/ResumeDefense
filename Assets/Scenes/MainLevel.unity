@@ -10191,6 +10191,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roundsText: {fileID: 1636986134}
+  sceneFader: {fileID: 295706666777390212}
+  mainMenuName: MainMenu
 --- !u!95 &965104490
 Animator:
   serializedVersion: 4
@@ -18714,6 +18716,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ui: {fileID: 1599011746}
+  sceneFader: {fileID: 295706666777390212}
+  mainMenuName: MainMenu
 --- !u!1001 &1774797490
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22339,6 +22343,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8cba337f3ab8de64d916290fbe15f354, type: 3}
+--- !u!114 &295706666777390212 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 295706668340550993, guid: 8cba337f3ab8de64d916290fbe15f354, type: 3}
+  m_PrefabInstance: {fileID: 295706666777390211}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6463816d7334e254fad8884075d216aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &928407343795501904
 PrefabInstance:
   m_ObjectHideFlags: 0
