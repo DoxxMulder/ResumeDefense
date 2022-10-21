@@ -6,6 +6,7 @@ using UnityEngine;
 public class WaveSpawner : MonoBehaviour
 {
     public static int EnemiesAlive = 0;
+    public Wave[] waves;
 
     public Transform enemyPrefab;
     public Transform spawnPoint;
@@ -14,7 +15,6 @@ public class WaveSpawner : MonoBehaviour
     public float timeBetweenWaves = 5f;
 
     private float countdown = 2f;
-    private float spawnDelay = 0.5f;
     private int waveIndex = 0;
 
     void Start()
@@ -42,21 +42,24 @@ public class WaveSpawner : MonoBehaviour
     }
     IEnumerator SpawnWave()
     {
-        waveIndex++;
-        for (int i = 0; i < waveIndex; i++)
+        // Only the first wave is populated, so just keep spawning the first wave entry
+        //Wave wave = waves[waveIndex];
+        Wave wave = waves[0];
+
+        for (int i = 0; i < wave.count; i++)
         {
-            SpawnEnemy();
-            yield return new WaitForSeconds(spawnDelay);
+            SpawnEnemy(wave.enemy);
+            yield return new WaitForSeconds(1f / wave.rate);
         }
 
-        Debug.Log("Wave Incoming!");
-
         PlayerStats.Rounds++;
+        
+        waveIndex++;
     }
 
-    void SpawnEnemy()
+    void SpawnEnemy(GameObject enemy)
     {
-        Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+        Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
         EnemiesAlive++;
     }
 
