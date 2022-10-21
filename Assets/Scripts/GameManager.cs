@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject gameOverUI;
 
-
+    public static int Difficulty = 0;
 
     public static bool GameIsOver;
 

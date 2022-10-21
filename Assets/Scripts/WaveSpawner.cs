@@ -5,11 +5,13 @@ using UnityEngine;
 
 public class WaveSpawner : MonoBehaviour
 {
+    public static int EnemiesAlive = 0;
+
     public Transform enemyPrefab;
     public Transform spawnPoint;
     public TextMeshProUGUI waveCountdownText;
 
-    public float timeBetweenWaves = 20f;
+    public float timeBetweenWaves = 5f;
 
     private float countdown = 2f;
     private float spawnDelay = 0.5f;
@@ -22,10 +24,16 @@ public class WaveSpawner : MonoBehaviour
 
     void Update()
     {
+        if ((EnemiesAlive > 0) && (GameManager.Difficulty == 0))
+        {
+            return;
+        }
+
         if (countdown <= 0f)
         {
             StartCoroutine(SpawnWave());
             countdown = timeBetweenWaves;
+            return;
         }
         countdown -= Time.deltaTime;
         countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
@@ -49,6 +57,7 @@ public class WaveSpawner : MonoBehaviour
     void SpawnEnemy()
     {
         Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+        EnemiesAlive++;
     }
 
 
