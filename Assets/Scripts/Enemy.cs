@@ -22,6 +22,8 @@ public class Enemy : MonoBehaviour
     public Image healthBar;
     public Gradient healthGradient;
 
+    private bool isDead = false;
+
 
     private void Start()
     {
@@ -39,7 +41,7 @@ public class Enemy : MonoBehaviour
         healthBar.fillAmount = healthPct;
         healthBar.color = healthGradient.Evaluate(healthPct);
 
-        if (health <= 0)
+        if (health <= 0 && !isDead)
         {
             Die();
         }
@@ -52,6 +54,7 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
+        isDead = true;
         PlayerStats.Money += value;
         GameObject effect = (GameObject)Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(effect, 5f);
