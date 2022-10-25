@@ -2462,7 +2462,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &221124690
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19685,6 +19685,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverUI: {fileID: 965104487}
+  nextlevel: Level02
+  levelToUnlock: 2
+  sceneFader: {fileID: 295706666777390212}
 --- !u!4 &1747589667
 Transform:
   m_ObjectHideFlags: 0
@@ -19763,6 +19766,7 @@ MonoBehaviour:
   enemyPrefab: {fileID: 3197256190354052916, guid: 860fece1f00d1b24a9ea9ce7466281c1, type: 3}
   spawnPoint: {fileID: 532529509}
   waveCountdownText: {fileID: 550751107}
+  gameManager: {fileID: 1747589666}
   timeBetweenWaves: 20
 --- !u!1001 &1774797490
 PrefabInstance:

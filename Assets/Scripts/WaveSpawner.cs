@@ -12,6 +12,8 @@ public class WaveSpawner : MonoBehaviour
     public Transform spawnPoint;
     public TextMeshProUGUI waveCountdownText;
 
+    public GameManager gameManager;
+
     public float timeBetweenWaves = 5f;
 
     private float countdown = 2f;
@@ -55,6 +57,12 @@ public class WaveSpawner : MonoBehaviour
         PlayerStats.Rounds++;
         
         waveIndex++;
+
+        if (waveIndex == waves.Length)
+        {
+            gameManager.WinLevel();
+            this.enabled = false;
+        }
     }
 
     void SpawnEnemy(GameObject enemy)
