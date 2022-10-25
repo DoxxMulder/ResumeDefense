@@ -2456,6 +2456,7 @@ GameObject:
   m_Component:
   - component: {fileID: 221124690}
   - component: {fileID: 221124691}
+  - component: {fileID: 221124692}
   m_Layer: 5
   m_Name: Complete Level
   m_TagString: Untagged
@@ -2508,6 +2509,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &221124692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221124689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f987d9d8b41e83546a1a3b18ef618751, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneFader: {fileID: 295706666777390212}
+  mainMenuName: MainMenu
+  nextlevel: Level02
+  levelToUnlock: 2
 --- !u!1 &225048029
 GameObject:
   m_ObjectHideFlags: 0
@@ -19685,9 +19702,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverUI: {fileID: 965104487}
-  nextlevel: Level02
-  levelToUnlock: 2
-  sceneFader: {fileID: 295706666777390212}
+  completeLevelUI: {fileID: 221124689}
 --- !u!4 &1747589667
 Transform:
   m_ObjectHideFlags: 0
