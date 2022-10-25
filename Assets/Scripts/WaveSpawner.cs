@@ -47,6 +47,7 @@ public class WaveSpawner : MonoBehaviour
         // Only the first wave is populated, so just keep spawning the first wave entry
         //Wave wave = waves[waveIndex];
         Wave wave = waves[0];
+        EnemiesAlive = wave.count;
 
         for (int i = 0; i < wave.count; i++)
         {
@@ -68,7 +69,6 @@ public class WaveSpawner : MonoBehaviour
     void SpawnEnemy(GameObject enemy)
     {
         Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
-        EnemiesAlive++;
     }
 
 
