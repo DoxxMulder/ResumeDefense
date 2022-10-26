@@ -22,6 +22,10 @@ public class WaveSpawner : MonoBehaviour
     private float countdown = 2f;
     private int waveIndex = 0;
 
+    [Header("Scaling")]
+    public float healthScale = 1f;
+    public int valueScale = 1;
+
     void Start()
     {
         
@@ -60,8 +64,8 @@ public class WaveSpawner : MonoBehaviour
 
         // Override settings for enemies
         Enemy waveEnemy = wave.enemy.GetComponent<Enemy>();
-        waveEnemy.value = waveIndex + 1;
-        waveEnemy.startHealth = 100f + (1f * waveIndex);
+        waveEnemy.value = (waveIndex + 1) * valueScale;
+        waveEnemy.startHealth = 100f + (healthScale * waveIndex);
 
         for (int i = 0; i < wave.count; i++)
         {
@@ -80,6 +84,4 @@ public class WaveSpawner : MonoBehaviour
     {
         Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
     }
-
-
 }

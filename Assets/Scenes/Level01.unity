@@ -7038,19 +7038,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   standardTurret:
     prefab: {fileID: 7574675760460784052, guid: ebaa724db61b06e44989a11246f812f0, type: 3}
-    cost: 100
+    cost: 10
     upgradedPrefab: {fileID: 7574675760460784052, guid: f3e7a919b717edd498e96804b0e870f1, type: 3}
     upgradeCost: 50
+  standardTurretCost: {fileID: 760980070}
   rocketTurret:
     prefab: {fileID: 8193713080144749547, guid: d7243373d708e8e44ac9962353ea5b3b, type: 3}
-    cost: 200
+    cost: 20
     upgradedPrefab: {fileID: 8193713080144749547, guid: 6c0ac965167d8fe439b440a204e1cade, type: 3}
     upgradeCost: 150
+  rocketTurretCost: {fileID: 1488078958}
   laserTurret:
     prefab: {fileID: 3532853423556144487, guid: bc3141f5611aac84780086eed83262c8, type: 3}
-    cost: 350
+    cost: 15
     upgradedPrefab: {fileID: 3532853423556144487, guid: 7aad4a172f1b5ca4a8b21c2c643183e7, type: 3}
     upgradeCost: 200
+  laserTurretCost: {fileID: 36414201}
 --- !u!1 &550751104
 GameObject:
   m_ObjectHideFlags: 0
@@ -19751,7 +19754,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b92b153d25435340ba20e03f6b4e676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startMoney: 400
+  startMoney: 30
   startLives: 1
 --- !u!114 &1747589670
 MonoBehaviour:
@@ -19789,6 +19792,9 @@ MonoBehaviour:
   waveCountdownText: {fileID: 550751107}
   gameManager: {fileID: 1747589666}
   timeBetweenWaves: 20
+  wavesToBeat: 50
+  healthScale: 1
+  valueScale: 1
 --- !u!1001 &1774797490
 PrefabInstance:
   m_ObjectHideFlags: 0
