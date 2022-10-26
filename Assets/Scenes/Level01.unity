@@ -6335,8 +6335,10 @@ MonoBehaviour:
   maxY: 100
   minX: 0
   maxX: 75
-  minZ: -80
+  minZ: -90
   maxZ: 0
+  minRotation: 45
+  maxRotation: 75
 --- !u!1 &524388858
 GameObject:
   m_ObjectHideFlags: 0

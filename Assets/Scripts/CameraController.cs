@@ -7,19 +7,16 @@ public class CameraController : MonoBehaviour
     public float panSpeed = 30f;
     public float panBorderThickness = 10f;
     public float scrollSpeed = 5f;
+    [Header("Camera Boundary Constraints")]
     public float minY = 10f;
     public float maxY = 100f;
     public float minX = -20f;
     public float maxX = 97f;
-    public float minZ = -80f;
+    public float minZ = -90f;
     public float maxZ = 0f;
-
-
-    
-    void Start()
-    {
-        
-    }
+    [Header("Camera Rotation Constraints")]
+    public float minRotation = 45f;
+    public float maxRotation = 75f;
 
     // Basic camera movement
     void Update()
@@ -57,18 +54,15 @@ public class CameraController : MonoBehaviour
         pos.y -= scroll * 1000 * scrollSpeed * Time.deltaTime;
         pos.y = Mathf.Clamp(pos.y, minY, maxY);
 
-        // Rotate the camera
-        // TODO: scale rotation based on Y value
-        // I want this to rotate the camera between 45 and 75 degrees
-        // dependant on the value of pos.Y, IE between 10 and 100
-        // should be something like:
-        // rotX = pos.y * (minRot / maxRot))
+        // Rotate the camera based on the y value
         float rotX;
-        float yRatio = minY / maxY;
-        rotX = (pos.y - minY) * yRatio;
-        rotX = 80f * rotX;
+        // Normalize the ratio of pos.y such that 0.0 = minY and 1.0 = maxY
+        float yRatio = (pos.y - minY) / (maxY - minY);
+        // Re-normalize the yRatio such that 0.0 = minRotation and 1.0 = maxRotation
+        rotX = minRotation + ((maxRotation - minRotation) * yRatio);
+        rotX = Mathf.Clamp(rotX, minRotation, maxRotation);
         Debug.Log(rotX);
-        rotX = Mathf.Clamp(rotX, 45f, 80f);
+        
         transform.rotation = Quaternion.Euler(rotX, 0, 0);
 
         
