@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class WaveSpawner : MonoBehaviour
@@ -15,6 +16,8 @@ public class WaveSpawner : MonoBehaviour
     public GameManager gameManager;
 
     public float timeBetweenWaves = 5f;
+
+    public int wavesToBeat = 50;
 
     private float countdown = 2f;
     private int waveIndex = 0;
@@ -31,7 +34,7 @@ public class WaveSpawner : MonoBehaviour
             return;
         }
 
-        if (waveIndex == waves.Length)
+        if (waveIndex == wavesToBeat)
         {
             gameManager.WinLevel();
             this.enabled = false;
@@ -54,6 +57,11 @@ public class WaveSpawner : MonoBehaviour
         //Wave wave = waves[waveIndex];
         Wave wave = waves[0];
         EnemiesAlive = wave.count;
+
+        // Override settings for enemies
+        Enemy waveEnemy = wave.enemy.GetComponent<Enemy>();
+        waveEnemy.value = waveIndex + 1;
+        waveEnemy.startHealth = 100f + (1f * waveIndex);
 
         for (int i = 0; i < wave.count; i++)
         {
