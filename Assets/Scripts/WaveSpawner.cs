@@ -19,7 +19,7 @@ public class WaveSpawner : MonoBehaviour
 
     public int wavesToBeat = 50;
 
-    private float countdown = 2f;
+    private float countdown;
     private int waveIndex = 0;
 
     [Header("Scaling")]
@@ -28,7 +28,8 @@ public class WaveSpawner : MonoBehaviour
 
     void Start()
     {
-        
+        countdown = 2f;
+        EnemiesAlive = 0;
     }
 
     void Update()

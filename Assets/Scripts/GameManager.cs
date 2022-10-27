@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         GameIsOver = false;
+        Time.timeScale = 1f;
     }
 
     void Update()
