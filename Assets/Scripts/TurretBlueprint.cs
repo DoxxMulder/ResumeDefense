@@ -13,6 +13,6 @@ public class TurretBlueprint
 
     public int GetSellAmount()
     {
-        return cost / 2;
+        return Mathf.RoundToInt(cost * 0.8f);
     }
 }

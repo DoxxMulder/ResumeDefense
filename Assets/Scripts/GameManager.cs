@@ -13,8 +13,7 @@ public class GameManager : MonoBehaviour
 
     public static int Difficulty = 0;
 
-    public static bool GameIsOver;
-      
+    public static bool GameIsOver;      
     
     private void Start()
     {

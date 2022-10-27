@@ -13,6 +13,7 @@ public class PlayerStats : MonoBehaviour
     public static int Rounds;
 
     public static int LifeLostToEnemyFromWave;
+    public static int TotalKills = 0;
 
     void Start()
     {
@@ -20,5 +21,6 @@ public class PlayerStats : MonoBehaviour
         Lives = startLives;
 
         Rounds = 0;
+        TotalKills = 0;
     }
 }

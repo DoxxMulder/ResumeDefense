@@ -42,13 +42,16 @@ public class NodeUI : MonoBehaviour
     {
         for (; ; )
         {
-            if (PlayerStats.Money >= target.turretBlueprint.upgradeCost)
+            if(target.turretBlueprint != null)
             {
-                upgradeButton.interactable = true;
-            }
-            else
-            {
-                upgradeButton.interactable = false;
+                if (PlayerStats.Money >= target.turretBlueprint.upgradeCost)
+                {
+                    upgradeButton.interactable = true;
+                }
+                else
+                {
+                    upgradeButton.interactable = false;
+                }
             }
             yield return new WaitForSeconds(0.25f);
         }
