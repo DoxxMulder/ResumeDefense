@@ -21,11 +21,14 @@ public class Enemy : MonoBehaviour
     [Header("Unity Stuff")]
     public Image healthBar;
     public Gradient healthGradient;
+    public GameObject shieldModel;
+    public Gradient shieldGradient;
 
     private bool isDead = false;
+    //private Renderer shieldRenderer = shieldModel.GetComponent<Renderer>();
 
 
-    private void Start()
+    void Start()
     {
         speed = startSpeed;
         partOfWave = PlayerStats.Rounds;
@@ -40,6 +43,8 @@ public class Enemy : MonoBehaviour
         float healthPct = health / startHealth;
         healthBar.fillAmount = healthPct;
         healthBar.color = healthGradient.Evaluate(healthPct);
+        Renderer shieldRenderer = shieldModel.GetComponent<Renderer>();
+        shieldRenderer.material.SetColor("_Color", shieldGradient.Evaluate(healthPct));
 
         if (health <= 0 && !isDead)
         {
