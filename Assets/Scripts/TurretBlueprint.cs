@@ -15,4 +15,13 @@ public class TurretBlueprint
     {
         return Mathf.RoundToInt(cost * 0.8f);
     }
+
+    public float GetTurretRange(bool isUpgraded)
+    {
+        if (isUpgraded)
+        {
+            return upgradedPrefab.GetComponent<Turret>().range;
+        }
+        return prefab.GetComponent<Turret>().range;
+    }
 }

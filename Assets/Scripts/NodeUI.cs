@@ -13,7 +13,10 @@ public class NodeUI : MonoBehaviour
 
     public TextMeshProUGUI sellAmount;
 
+    public GameObject rangeProjector;
+
     private Node target;
+    private float range;
 
     public void SetTarget(Node _target)
     {
@@ -26,9 +29,11 @@ public class NodeUI : MonoBehaviour
         if (!target.isUpgraded)
         {
             upgradeCost.text = "$" + target.turretBlueprint.upgradeCost;
+            range = target.turretBlueprint.GetTurretRange(false);
         }
         else
         {
+            range = target.turretBlueprint.GetTurretRange(true);
             upgradeCost.text = "Maxed out!";
             upgradeButton.interactable = false;
         }
@@ -36,6 +41,9 @@ public class NodeUI : MonoBehaviour
         sellAmount.text = "$" + target.turretBlueprint.GetSellAmount();
 
         ui.SetActive(true);
+        
+        rangeProjector.GetComponent<Projector>().orthographicSize = range;
+        rangeProjector.SetActive(true);
     }
 
     IEnumerator CheckMoney()
@@ -60,6 +68,7 @@ public class NodeUI : MonoBehaviour
     public void Hide()
     {
         ui.SetActive(false);
+        rangeProjector.SetActive(false);
     }
 
     public void Upgrade()
