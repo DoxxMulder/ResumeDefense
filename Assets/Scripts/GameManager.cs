@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     public GameObject gameOverUI;
     public GameObject completeLevelUI;
 
-    public static int Difficulty = 0;
+    public static int Difficulty = PlayerPrefs.GetInt("Difficulty", 0);
 
     public static bool GameIsOver;      
     
