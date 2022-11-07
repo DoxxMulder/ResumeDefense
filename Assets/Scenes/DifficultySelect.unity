@@ -1664,6 +1664,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8cba337f3ab8de64d916290fbe15f354, type: 3}
+--- !u!114 &1504205432 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 295706668340550993, guid: 8cba337f3ab8de64d916290fbe15f354, type: 3}
+  m_PrefabInstance: {fileID: 1504205431}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6463816d7334e254fad8884075d216aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1607912725
 GameObject:
   m_ObjectHideFlags: 0
@@ -1808,7 +1819,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b334b886605ff74abd78f590f8cc236, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fader: {fileID: 0}
+  fader: {fileID: 1504205432}
   leftButton: {fileID: 1374350716}
   rightButton: {fileID: 1627673945}
   difficulty: {fileID: 1257269911}
