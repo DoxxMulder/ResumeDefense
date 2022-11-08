@@ -15,7 +15,7 @@ public class WaveSpawner : MonoBehaviour
 
     public GameManager gameManager;
 
-    public float timeBetweenWaves = 5f;
+    public float timeBetweenWaves = 30f;
 
     public int wavesToBeat = 50;
 
@@ -28,12 +28,13 @@ public class WaveSpawner : MonoBehaviour
 
     void Start()
     {
-        countdown = 2f;
+        countdown = timeBetweenWaves;
         EnemiesAlive = 0;
     }
 
     void Update()
     {
+        // If "Easy" difficulty, don't spawn new enemies until the current wave has been defeated
         if ((EnemiesAlive > 0) && (GameManager.Difficulty == 0))
         {
             return;

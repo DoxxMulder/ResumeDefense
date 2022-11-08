@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,13 +12,20 @@ public class GameManager : MonoBehaviour
     public GameObject gameOverUI;
     public GameObject completeLevelUI;
 
+    public int setDifficulty;
     public static int Difficulty;
-
     public static bool GameIsOver;      
     
     private void Start()
     {
-        Difficulty = PlayerPrefs.GetInt("Difficulty", 0);
+        if (setDifficulty.IsUnityNull() && Difficulty.IsUnityNull())
+        {
+            Difficulty = PlayerPrefs.GetInt("Difficulty", 0);
+        }
+        else
+        {
+            Difficulty = setDifficulty;
+        }
         GameIsOver = false;
         Time.timeScale = 1f;
     }

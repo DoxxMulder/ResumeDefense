@@ -21131,6 +21131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOverUI: {fileID: 965104487}
   completeLevelUI: {fileID: 221124689}
+  setDifficulty: 1
 --- !u!4 &1747589667
 Transform:
   m_ObjectHideFlags: 0
