@@ -11,12 +11,13 @@ public class GameManager : MonoBehaviour
     public GameObject gameOverUI;
     public GameObject completeLevelUI;
 
-    public static int Difficulty = PlayerPrefs.GetInt("Difficulty", 0);
+    public static int Difficulty;
 
     public static bool GameIsOver;      
     
     private void Start()
     {
+        Difficulty = PlayerPrefs.GetInt("Difficulty", 0);
         GameIsOver = false;
         Time.timeScale = 1f;
     }
