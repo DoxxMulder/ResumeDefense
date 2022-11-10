@@ -6,7 +6,9 @@ using UnityEngine.UI;
 
 public class NodeUI : MonoBehaviour
 {
-    public GameObject ui;
+    public GameObject nodeUI;
+    public GameObject upgradeUI;
+    public GameObject shopUI;
 
     public TextMeshProUGUI upgradeCost;
     public Button upgradeButton;
@@ -40,7 +42,9 @@ public class NodeUI : MonoBehaviour
 
         sellAmount.text = "$" + target.turretBlueprint.GetSellAmount();
 
-        ui.SetActive(true);
+        nodeUI.SetActive(true);
+        shopUI.SetActive(false);
+        upgradeUI.SetActive(true);
         
         rangeProjector.GetComponent<Projector>().orthographicSize = range;
         rangeProjector.SetActive(true);
@@ -67,7 +71,9 @@ public class NodeUI : MonoBehaviour
 
     public void Hide()
     {
-        ui.SetActive(false);
+        nodeUI.SetActive(false);
+        upgradeUI.SetActive(false);
+        shopUI.SetActive(true);
         rangeProjector.SetActive(false);
     }
 
