@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+// Class for accessing/storing build info
 [System.Serializable]
 public class TurretBlueprint
 {
@@ -16,6 +18,7 @@ public class TurretBlueprint
         return Mathf.RoundToInt(cost * 0.8f);
     }
 
+    //TODO: Depreciate this, move it to the turret script
     public float GetTurretRange(bool isUpgraded)
     {
         if (isUpgraded)
@@ -23,5 +26,10 @@ public class TurretBlueprint
             return upgradedPrefab.GetComponent<Turret>().range;
         }
         return prefab.GetComponent<Turret>().range;
+    }
+
+    public Turret GetTurret()
+    {
+        return prefab.GetComponent<Turret>();
     }
 }

@@ -44,7 +44,9 @@ public class NodeUI : MonoBehaviour
 
         nodeUI.SetActive(true);
         shopUI.SetActive(false);
+        // Activate upgradeUI, pass through the turret to be upgraded
         upgradeUI.SetActive(true);
+        upgradeUI.GetComponent<UpgradeMenu>().SetTarget(target.turretBlueprint.GetTurret());
         
         rangeProjector.GetComponent<Projector>().orthographicSize = range;
         rangeProjector.SetActive(true);

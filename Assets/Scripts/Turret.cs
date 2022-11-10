@@ -9,7 +9,7 @@ public class Turret : MonoBehaviour
     
 
     [Header("General")]
-
+    public string turretName;
     public float range = 15f;
 
     [Header("Use Bullets (default)")]
@@ -143,6 +143,7 @@ public class Turret : MonoBehaviour
         }
     }
 
+    
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.green;
